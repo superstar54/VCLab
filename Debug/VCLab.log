@@ -1,0 +1,75 @@
+﻿生成启动时间为 2015/11/9 23:20:39。
+     1>项目“D:\VS2015\VCLab\VCLab\VCLab.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt source\CalcEquilibrium.cpp source\CalcGibbsEnergy.cpp source\Database.cpp source\DefineSystem.cpp source\FindConvexHull.cpp source\GlobalGrid.cpp source\LineSolver.cpp source\MinEnergy.cpp source\Tool.cpp source\VCLab.cpp source\VCLInput.cpp
+         VCLInput.cpp
+     1>d:\vs2015\vclab\vclab\source\vclinput.cpp(130): warning C4018: “<”: 有符号/无符号不匹配
+         VCLab.cpp
+         Tool.cpp
+         MinEnergy.cpp
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(213): warning C4101: “otoleF”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(312): warning C4101: “sumx”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(420): warning C4101: “tempd”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(420): warning C4101: “tempvm”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(419): warning C4101: “tempi”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(474): warning C4101: “tempd”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(471): warning C4101: “k”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(474): warning C4101: “tempvm”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\minenergy.cpp(473): warning C4101: “tempi”: 未引用的局部变量
+         LineSolver.cpp
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(32): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(57): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(71): warning C4101: “j”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(103): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(112): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\linesolver.cpp(97): warning C4101: “j”: 未引用的局部变量
+         GlobalGrid.cpp
+     1>d:\vs2015\vclab\vclab\source\globalgrid.cpp(209): warning C4101: “k”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\globalgrid.cpp(211): warning C4101: “temp”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\globalgrid.cpp(212): warning C4101: “aveGP”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\globalgrid.cpp(262): warning C4101: “fphn”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\globalgrid.cpp(263): warning C4101: “fphid”: 未引用的局部变量
+         FindConvexHull.cpp
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(9): warning C4101: “i”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(134): warning C4101: “omat”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(135): warning C4101: “omat1”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(133): warning C4101: “temp”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(257): warning C4101: “dfx”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(256): warning C4101: “k”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(257): warning C4101: “dx”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\findconvexhull.cpp(256): warning C4101: “in”: 未引用的局部变量
+         DefineSystem.cpp
+         Database.cpp
+         CalcGibbsEnergy.cpp
+     1>d:\vs2015\vclab\vclab\source\calcgibbsenergy.cpp(60): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\calcgibbsenergy.cpp(333): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\calcgibbsenergy.cpp(439): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\calcgibbsenergy.cpp(568): warning C4018: “<”: 有符号/无符号不匹配
+     1>d:\vs2015\vclab\vclab\source\calcgibbsenergy.cpp(692): warning C4018: “<”: 有符号/无符号不匹配
+         CalcEquilibrium.cpp
+     1>d:\vs2015\vclab\vclab\source\calcequilibrium.cpp(156): warning C4101: “maxDFid”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\calcequilibrium.cpp(155): warning C4101: “i”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\calcequilibrium.cpp(157): warning C4101: “maxDF”: 未引用的局部变量
+     1>d:\vs2015\vclab\vclab\source\calcequilibrium.cpp(245): warning C4018: “<”: 有符号/无符号不匹配
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\VCLab.res" VCLab.rc 
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\VS2015\VCLab\Debug\VCLab.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\VS2015\VCLab\Debug\VCLab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\VS2015\VCLab\Debug\VCLab.lib" /MACHINE:X86 Debug\VCLab.res
+         Debug\CalcEquilibrium.obj
+         Debug\CalcGibbsEnergy.obj
+         Debug\Database.obj
+         Debug\DefineSystem.obj
+         Debug\FindConvexHull.obj
+         Debug\GlobalGrid.obj
+         Debug\LineSolver.obj
+         Debug\MinEnergy.obj
+         Debug\Tool.obj
+         Debug\VCLab.obj
+         Debug\VCLInput.obj
+         VCLab.vcxproj -> D:\VS2015\VCLab\Debug\VCLab.exe
+     1>已完成生成项目“D:\VS2015\VCLab\VCLab\VCLab.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:12.89

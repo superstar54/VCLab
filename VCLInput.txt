@@ -1,0 +1,19 @@
+
+VCLmode					= Line !
+
+Database_FileName		=TDB\lisini.TDB!
+Elements				= li, si, ni!
+
+Compositions			= 0.6,0.3, 0.1!
+
+
+Pressure				= 10500!
+
+Varibles				= Temperature !
+V_Start					= 300 !
+V_End					= 2000 !
+V_Interval				= 10 !
+
+Result_Output_File		= Result.txt !
+
+Global_Grid_interval	= 0.0199 !
