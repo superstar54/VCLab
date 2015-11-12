@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx,subfigure}
+\topmargin -1mm
+\oddsidemargin -1mm
+\evensidemargin -1mm
+\textwidth 165mm
+\textheight 220mm
+\parskip 2mm
+\parindent 3mm
+%\pagestyle{empty}
+
+\begin{document}
+
+
+
+\begin{center}
+
+{\Large \bf VCLab the Guide.}
+
+\bigskip
+
+written by Xing Wang
+
+\bigskip
+
+Central South University, China
+
+\bigskip
+
+Version \today
+
+\end{center}
+
+
+\bigskip
+
+{\em This is part of the documentation of the Virtual CALPHAD Laboratory
+software.}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+VCLab is a open source package for CALPHAD calculations. 
+
+The VCLab guide is mainly explain the files and control flags implemented in the code. This guide also tries to give an impression, how VCLab works. The guide continues to grow as new features are added to the code. It is therefore useful to check the online version of the VCLab guide from time to time, to learn about new features added to the code.
+
+
+
+\section{Installation}
+
+
+
+
+\section{Input files}
+The VCLInput.txt is the central input file of VCLab. It determines ¡¯what to do and how to do it¡¯.
+
+
+
+\section{Point calculations}
+
+
+\section{Line calculations}
+
+
+\section{Gibbs energy surface}
+
+
+
+\section{Summary}
+
+Not finished yet. More detail should be added.
+
+\end{document}
+
