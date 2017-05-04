@@ -35,11 +35,9 @@ Global_Grid_Interval       =    0.02          !
 
 Equilibrium can be found in the VCLOutput.txt file. A example is list below:
 
-====================================================
 Conditions:   T = 600   P = 10500   N = 1
    X(AL) = 0.7
    X(ZN) = 0.3
-====================================================
 
 Equilibrium:
 
