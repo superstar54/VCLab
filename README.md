@@ -81,7 +81,8 @@ Global_Grid_Interval      =    0.02          !
 
 ##### 2D calculation
 Calculate the Gibbs energy surface of BCC_A2 Phases in Cu-Sn-Ti ternary system.
-'''python
+
+```python
 Mode                      =    Energy Surface !
 Database_File             =    cusnti.TDB     ! 
 Elements                  =    cu, sn, ti     !
@@ -90,6 +91,6 @@ Phases_Rejected           =    none           !
 Pressure                  =    101325         !
 Temperature               =    800            !
 Global_Grid_Interval      =    0.02           !
-'''
+```
 
 <img src="documentations/figs/BCC_A2.png"/>
