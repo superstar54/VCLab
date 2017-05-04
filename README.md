@@ -10,10 +10,8 @@ VCLab (Virtual CALPHAD Laboratory), an open-source software for CALPHAD Calculat
 
 ### Model
 What property can be calculated:
-(1) Equilibrium
-Calculate the thermodynamic equilibrium
-(2) Gibbs energy surface
-Calculate the Gibbs energy surface of specific phase.
+* Thermodynamic equilibrium
+* Gibbs energy surface of specific phase.
 
 
 ### Database File
