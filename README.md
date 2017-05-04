@@ -33,9 +33,9 @@ Pressure                   =    101325        !
 Temperature                =    600           !
 Compositions               =    0.6, 0.4      !
 Global_Grid_Interval       =    0.02          !
-```python
+```
 Equilibrium can be found in the VCLOutput.txt file. A example is list below:
-```python
+```
 ===========================================
 Conditions:   T = 600   P = 10500   N = 1
    X(AL) = 0.7
