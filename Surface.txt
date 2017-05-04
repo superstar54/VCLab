@@ -1,0 +1,17 @@
+
+Mode					= energy_surface!
+
+Database_FileName		= TDB\cusnti.TDB!
+
+Elements				= cu, sn, ti!
+
+Phases_Selected			= bcc_a2 !
+
+Phases_Rejected			= none !
+
+Pressure				= 101325!
+
+Temperature 			= 1400 !
+
+
+Global_Grid_interval	= 0.02 !

@@ -1,3 +1,282 @@
+<<<<<<< HEAD
+
+#include "..\include\FindConvexHull.h"
+namespace VCLab
+{
+	//================   Find Convex Face    =====================================
+	// GP, 0:dim-2 is x, dim -1 is energy, dim is x
+	void FindCH::FindConvexFace(int in_Dim, int in_GPn, Point *GP, Point  PA)
+	{
+		int i;
+		Dim = in_Dim;			//
+		GPn = in_GPn;			//
+		int fn = GPn*Dim;		//
+		
+		if (debug >= 2)
+		{
+			cout << "Input data: \n";
+			for (i = 0; i < GPn; i++)
+				ShowPoint(" ", Dim + 1, GP[i]);
+		}
+		
+
+		//Found the global face
+		FindGFace(Dim, GPn, GP, f);
+		if (debug >= 1)
+		{
+			ShowPoint("alloy composition£º", Dim, PA);
+			ShowFace("initial global face£º", Dim, Dim + 1, f);
+		}
+		//interation
+		IterConvexFace(GPn, GP, f, PA); 
+
+	}
+	void FindCH::FindGFace(int Dim, int GPn, Point *GP, Face &f)
+	{
+		int i, j;
+		//initial face is unit matrix with large energy
+		for (i = 0; i < Dim; i++)
+		{
+			for (j = 0; j < Dim; j++)
+				f.p[i].x[j] = eps;
+			f.p[i].x[i] = 1 - 10*eps;  
+			f.p[i].x[Dim] = 1e8;
+			f.p[i].fid = i; 
+			f.p[i].fb = 1;
+		}
+		// the i point in face have the largest i compositions, same com, lower energy
+		for (i = 0; i < GPn; i++)
+		{
+			for (j = 0; j < Dim; j++)
+			{
+				if (GP[i].x[j] - f.p[j].x[j] > -2.0 * eps && GP[i].x[Dim] < f.p[j].x[Dim]) 
+					f.p[j] = GP[i]; 
+			}
+		}
+	}
+
+	void FindCH::IterConvexFace(int GPn, Point *GP, Face &f, Point PA)
+	{
+		int i, j, maxi, newmaxi;
+		double tempg, tempgmin;
+		double tempgmin_old;
+		int newfb = 0, pmin;
+		Point tempP;
+
+		CalcChemicalpotential(f, Chp);
+		//Find the lowest energy point, based on current energy surface
+		ncountp = 0;
+		maxi = FindMaxD(GPn, GP, f, Chp);
+		tempgmin_old = 1e30;
+		while (maxi > -1)
+		{
+			if (ncountp > GPn)
+			{
+				cout << "Too much iteration in find convex point!!!";
+				exit(1);
+			}
+			if (debug >= 1)
+				ShowPoint("New point: ", Dim, GP[maxi]);
+			newmaxi = -1;
+			newfb = 0;
+			tempgmin = 1e30;
+			//replace one point in old face using new point, jugde alloy in new face or not
+			for (i = 0; i < Dim; i++)
+			{
+				tempP = f.p[i];
+				f.p[i] = GP[maxi];
+				// inside new face or not
+				if (inside(PA, f))
+				{
+					newfb = 1;
+					// new energy surface
+					CalcChemicalpotential(f, Chp);
+					//
+					tempg = 0;
+					for (j = 0; j < Dim; j++)
+					{
+						tempg += PA.x[j] * Chp[j + 2];
+					}
+					if (tempg < tempgmin)
+					{
+						tempgmin = tempg;
+						pmin = i;
+					}
+				}
+				f.p[i] = tempP;
+			}
+			if (newfb == 1)
+			{
+				
+				f.p[pmin] = GP[maxi];
+				CalcChemicalpotential(f, Chp);
+				if (debug >= 1)
+					ShowFace("Find a new face: ", Dim, Dim + 1, f);
+				if (debug >= 1)
+					cout << "Current gibbs energy: " << tempgmin << endl;
+				newmaxi = FindMaxD(GPn, GP, f, Chp);
+				if ((tempgmin - tempgmin_old)>-1e-9)
+				{
+					newmaxi = -1;
+					break;
+				}
+			}
+			tempgmin_old = tempgmin;
+			maxi = newmaxi;
+		}
+	}
+
+	void FindCH::CalcChemicalpotential(Face f, double(&Chp)[MDim3])
+	{
+		int i, j;
+		for (i = 0; i < Dim; i++)
+		{
+			for (j = 0; j < Dim; j++)
+				eF[i][j] = f.p[i].x[j];
+			eFJ[i] = f.p[i].x[Dim];
+		}
+		
+		if (gauss_elimination(Dim, eF, eFJ))
+		{
+			for (i = 0; i < Dim; i++)
+				Chp[i + 2] = eFJ[i];
+		}
+		else
+		{
+			cout << "\n The matrix is singular, calculations failed!!!" << endl;
+			exit(1);
+		}
+		
+
+	}
+
+	int FindCH::FindMaxD(int GPn, Point *GP, Face f, double Chp[MDim3])
+	{
+		int i, j, maxi;
+		double tempg, tempd, maxd;
+		maxi = -1;
+		maxd = eps6;
+		if (ncountp < 1)
+		{
+			for (i = 0; i < GPn; i++)
+			{
+				if (GP[i].fb == 0)
+					continue;
+				//showPoint("Point: ", Dim, GP[i]);
+				tempg = 0;
+				for (j = 0; j < Dim; j++)
+				{
+					tempg += GP[i].x[j] * Chp[j + 2];
+				}
+				tempd = tempg - GP[i].x[Dim];
+				if (tempd>maxd) 
+				{
+					maxd = tempd;
+					maxi = i;
+				}
+				else if(tempd<-eps3)
+				{
+					GP[i].fb = 0;
+				}
+			}
+		}
+		else
+		{
+			for (i = 0; i < GPn; i++)
+			{
+				if (GP[i].fb == 0)
+					continue;
+				//showPoint("Point: ", Dim, GP[i]);
+				tempg = 0;
+				for (j = 0; j < Dim; j++)
+				{
+					tempg += GP[i].x[j] * Chp[j + 2];
+				}
+				tempd = tempg - GP[i].x[Dim];
+				if (tempd>maxd)
+				{
+					maxd = tempd;
+					maxi = i;
+				}
+			}
+		}
+		ncountp++;
+		return maxi;
+	}
+
+	void FindCH::ShowConvexFace(string OutFileName)
+	{
+		int i, j;
+		cout << "Face found: " << endl;
+		ofstream Out(OutFileName.c_str());
+		Out << Dim << endl;
+		for (i = 0; i < Dim; i++)
+		{
+			for (j = 0; j < Dim + 1; j++)
+			{
+				cout << f.p[i].x[j] << "  ";
+				Out << f.p[i].x[j] << "  ";
+			}
+			cout << endl;
+		}
+		Out.close();
+	}
+	void FindCH::ShowFace(string str, int n, int m, Face f)
+	{
+		int i, j;
+		cout << str.c_str() << endl;
+		for (i = 0; i < n; i++)
+		{
+			cout << "the " << i << " Point£º ";
+			for (j = 0; j < m; j++)
+				cout << f.p[i].x[j] << "  ";
+			cout << endl;
+		}
+	}
+
+	void FindCH::ShowPoint(string str, int n, Point p)
+	{
+		int i;
+		cout << str.c_str() << endl;
+		for (i = 0; i < n; i++)
+			cout << p.x[i] << "  ";
+	}
+
+	
+
+	bool FindCH::inside(Point p, Face f)
+	{
+		int i, j, k, in;
+		double dx, dfx;
+		double eF[MDim3];
+		double eFJ[MDim3][MDim3];
+		// building matrix
+		for (i = 0; i < Dim; i++)
+		{
+			for (j = 0; j < Dim; j++)
+				eFJ[i][j] = f.p[j].x[i];
+			eF[i] = p.x[i];
+		}
+		if (gauss_elimination(Dim, eFJ, eF))
+		{
+			// all phase farctions should in [0,1]
+			for (i = 0; i < Dim; i++)
+			{
+				if (eF[i] < -eps || eF[i] > (1.0 + eps))
+					return false;
+			}
+		}
+		else
+		{
+			//cout << "\n The matrix is singular, calculations failed!!!" << endl;
+			return false;
+		}
+		return true;
+	}
+
+	
+} //end of VCLab
+=======
 
 #include "..\include\FindConvexHull.h"
 namespace VCLab
@@ -454,3 +733,4 @@ namespace VCLab
 	
 	
 } //end of VCLab
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009

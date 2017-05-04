@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 VCLmode					= Line !
 
@@ -16,4 +17,24 @@ V_Interval				= 10 !
 
 Result_Output_File		= Result.txt !
 
+=======
+
+VCLmode					= Line !
+
+Database_FileName		= TDB\alzn.TDB !
+Elements				= al, zn!
+
+Compositions			= 0.35,0.65!
+
+
+Pressure				= 10500!
+
+Varibles				= Temperature !
+V_Start					= 300 !
+V_End					= 1200 !
+V_Interval				= 10 !
+
+Result_Output_File		= Result.txt !
+
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009
 Global_Grid_interval	= 0.0199 !

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 VCLmode					= Point !
 
@@ -14,4 +15,22 @@ Temperature 			= 700 !
 
 Result_Output_File		= Result.txt !
 
+=======
+
+VCLmode					= Point !
+
+Database_FileName		= TDB\cusnti.TDB !
+Elements				= cu, sn, ti!
+
+Compositions			= 0.5, 0.35,0.15!
+
+
+Pressure				= 10500!
+
+Temperature 			= 700 !
+
+
+Result_Output_File		= Result.txt !
+
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009
 Global_Grid_interval	= 0.099 !

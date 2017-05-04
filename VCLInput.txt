@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+
+Mode					= equilibrium !
+
+Dimension				= 0D !
+
+Database_FileName			= TDB\alzn.TDB!
+
+Elements				= al, zn!
+
+Compositions				= 0.2, 0.8!
+
+Phases_Selected				= all !
+
+Phases_Rejected				= none !
+
+Pressure				= 101325!
+
+Temperature 				= 700 !
+
+
+Global_Grid_interval			= 0.01 !
+=======
 
 VCLmode					= Line !
 
@@ -17,3 +40,4 @@ V_Interval				= 10 !
 Result_Output_File		= Result.txt !
 
 Global_Grid_interval	= 0.0199 !
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009

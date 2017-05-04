@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 VCLmode					= Line !
 
@@ -16,4 +17,24 @@ V_Interval				= 10 !
 
 Result_Output_File		= Result.txt !
 
+=======
+
+VCLmode					= Line !
+
+Database_FileName		= TDB\cusnti.TDB !
+Elements				= cu, sn, ti!
+
+Compositions			= 0.4, 0.25, 0.35!
+
+
+Pressure				= 101325!
+
+Varibles				= Temperature !
+V_Start					= 300 !
+V_End					= 2000 !
+V_Interval				= 10 !
+
+Result_Output_File		= Result.txt !
+
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009
 Global_Grid_interval	= 0.0199 !

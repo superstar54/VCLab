@@ -1,3 +1,271 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.4)  15 NOV 2015 03:12
+entering extended mode
+**D:/VS2015/VCLab/VCLab/documentations/User*Guide.tex
+("D:/VS2015/VCLab/VCLab/documentations/User Guide.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen105
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen106
+\subfiglabelskip=\skip46
+\c@subfigure=\count88
+\c@lofdepth=\count89
+\c@subtable=\count90
+\c@lotdepth=\count91
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count92
+\float@exts=\toks17
+\float@box=\box26
+\@float@everytoks=\toks18
+\@floatcapt=\box27
+)
+("D:\VS2015\VCLab\VCLab\documentations\User Guide.aux"
+
+LaTeX Warning: Label `fg:femogrid' multiply defined.
+
+)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+ ("D:\Program Files (x86)\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count93
+\scratchdimen=\dimen107
+\scratchbox=\box28
+\nofMPsegments=\count94
+\nofMParguments=\count95
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count96
+\MPscratchDim=\dimen108
+\MPnumerator=\count97
+\makeMPintoPDFobject=\count98
+\everyMPtoPDFconversion=\toks20
+) <figs/bagua.png, id=1, 570.13pt x 570.13pt>
+File: figs/bagua.png Graphic file (type png)
+ <use figs/bagua.png>
+Package pdftex.def Info: figs/bagua.png used on input line 32.
+(pdftex.def)             Requested size: 56.9055pt x 56.90324pt.
+ [1
+
+{D:/Program Files (x86)/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGB
+K.sfd}} <D:/VS2015/VCLab/VCLab/documentations/figs/bagua.png>]
+("D:\VS2015\VCLab\VCLab\documentations\User Guide.toc"
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+)
+\tf@toc=\write3
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+[3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 158--167
+
+ []
+
+<figs/ALZN.jpg, id=21, 774.7344pt x 592.8549pt>
+File: figs/ALZN.jpg Graphic file (type jpg)
+ <use figs/ALZN.jpg>
+Package pdftex.def Info: figs/ALZN.jpg used on input line 173.
+(pdftex.def)             Requested size: 227.62204pt x 174.18507pt.
+
+<figs/B88_SNTI2.jpg, id=22, 774.7344pt x 592.8549pt>
+File: figs/B88_SNTI2.jpg Graphic file (type jpg)
+ <use figs/B88_SNTI2.jpg>
+Package pdftex.def Info: figs/B88_SNTI2.jpg used on input line 175.
+(pdftex.def)             Requested size: 227.62204pt x 174.18507pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--193
+
+ []
+
+<figs/BCC_A2.png, id=23, 774.7344pt x 592.8549pt>
+File: figs/BCC_A2.png Graphic file (type png)
+ <use figs/BCC_A2.png>
+Package pdftex.def Info: figs/BCC_A2.png used on input line 198.
+(pdftex.def)             Requested size: 341.43306pt x 261.27309pt.
+
+[5] [6 <D:/VS2015/VCLab/VCLab/documentations/figs/ALZN.jpg> <D:/VS2015/VCLab/VC
+Lab/documentations/figs/B88_SNTI2.jpg> <D:/VS2015/VCLab/VCLab/documentations/fi
+gs/BCC_A2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 210--221
+
+ []
+
+
+Overfull \hbox (5.74683pt too wide) in paragraph at lines 224--230
+\OT1/cmr/m/n/12 ==================================================== 
+ []
+
+
+Overfull \hbox (5.74683pt too wide) in paragraph at lines 224--230
+\OT1/cmr/m/n/12 ==================================================== 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 237--242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--247
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 256--271
+
+ []
+
+<figs/CuSnTi.png, id=36, 422.32782pt x 316.18124pt>
+File: figs/CuSnTi.png Graphic file (type png)
+ <use figs/CuSnTi.png>
+Package pdftex.def Info: figs/CuSnTi.png used on input line 278.
+(pdftex.def)             Requested size: 227.62204pt x 170.4169pt.
+
+<figs/TC_CuSnTi.jpg, id=37, 527.9725pt x 559.08875pt>
+File: figs/TC_CuSnTi.jpg Graphic file (type jpg)
+ <use figs/TC_CuSnTi.jpg>
+Package pdftex.def Info: figs/TC_CuSnTi.jpg used on input line 280.
+(pdftex.def)             Requested size: 227.62204pt x 241.03476pt.
+
+[8] [9 <D:/VS2015/VCLab/VCLab/documentations/figs/CuSnTi.png (PNG copy)> <D:/VS
+2015/VCLab/VCLab/documentations/figs/TC_CuSnTi.jpg>]
+Overfull \hbox (38.16461pt too wide) detected at line 437
+[] [] \OT1/cmr/m/n/12 = [] [] [] (11[])
+ []
+
+[10] [11] [12] ("D:\VS2015\VCLab\VCLab\documentations\User Guide.aux")
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1426 strings out of 495354
+ 19444 string characters out of 3182739
+ 77834 words of memory out of 3000000
+ 4609 multiletter control sequences out of 15000+200000
+ 7894 words of font info for 28 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,11n,24p,389b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+<D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:
+/Program Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/P
+rogram Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Pro
+gram Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Progr
+am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Program 
+Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Program Fil
+es (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program File
+s (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on "User Guide.pdf" (12 pages, 1453939 bytes).
+PDF statistics:
+ 94 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+=======
 This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.4)  12 NOV 2015 12:05
 entering extended mode
 **D:/VS2015/VCLab/VCLab/documentations/User*Guide.tex
@@ -153,3 +421,4 @@ PDF statistics:
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009

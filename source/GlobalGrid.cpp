@@ -1,3 +1,229 @@
+<<<<<<< HEAD
+#include "..\include\GlobalGrid.h"
+
+namespace VCLab
+{
+	using namespace std;
+
+	GlobalGrid::~GlobalGrid()
+	{
+		//cout << "Calculate Equilibrium modulue exit." << endl;
+	}
+
+	
+	// generate grid point, permutation of x, yfractions and energy
+	void GlobalGrid::GeneGPy(vector<Phase> &CEPhases, Condition CEConditions)
+	{
+		int i, j, k, ki, nc;
+		int ystart;
+		int combn, combm;
+		double tempx;
+
+		int **input;
+		int **output;
+
+		// Input
+		Phn = CEPhases.size();
+		nele = CEConditions.nele - 2;
+		GPdx = CEConditions.dx;
+		//
+		CalcGPn(CEPhases);
+
+		for (i = 0; i < Phn; i++)
+		{
+			// new
+			CEPhases[i].GP = new Point[CEPhases[i].GPn];
+
+			CEPhases[i].GPGF = new double[CEPhases[i].GPn];
+			CEPhases[i].GPSF = new double[GPn];
+			CEPhases[i].GPTC = new double[GPn];
+			CEPhases[i].GPBMAGN = new double[GPn];
+			CEPhases[i].GPtao = new double[GPn];
+
+			for (j = 0; j < CEPhases[i].subln; j++) //loop sublattices
+			{
+				//generate combinations in this sublattice=========================
+				combm = CEPhases[i].conn[j] - 1;
+				combn = CEPhases[i].GPsndy[j] + combm;
+				GGComb[j].combinations(1, CEPhases[i].GPsdy[j], combn, combm);
+			}
+			//cartesian production of sublattices to get all permuntations==========
+			input = new int*[CEPhases[i].subln];
+			for (j = 0; j < CEPhases[i].subln; j++)
+			{
+				input[j] = new int[CEPhases[i].GPsn[j]];
+				for (k = 0; k < CEPhases[i].GPsn[j]; k++)
+					input[j][k] = k;
+			}
+			output = new int*[CEPhases[i].GPn];
+			for (j = 0; j < CEPhases[i].GPn; j++)
+				output[j] = new int[CEPhases[i].subln];
+
+			//cartesian production
+			cart_product(output, CEPhases[i].GPn, input, CEPhases[i].GPsn, CEPhases[i].subln);
+
+			
+			for (j = 0; j < CEPhases[i].GPn; j++)  
+			{
+				ystart = 0;
+				for (k = 0; k < CEPhases[i].subln; k++)
+				{
+					for (ki = 0; ki < CEPhases[i].conn[k]; ki++)
+					{
+						CEPhases[i].GP[j].y[ki + ystart] = GGComb[k].comb[output[j][k]][ki];
+					}
+					ystart += CEPhases[i].conn[k];
+				}
+			}
+			
+			// Calculate the compositions===========================================
+			for (j = 0; j < CEPhases[i].GPn; j++)
+			{
+				for (k = 0; k < nele; k++)
+					CEPhases[i].GP[j].x[k] = 0;
+				
+				for (k = 0; k < CEPhases[i].yn; k++)
+				{
+					CEPhases[i].GP[j].x[CEPhases[i].yide[k] - 2] += CEPhases[i].ysp[k] * CEPhases[i].GP[j].y[k];
+				}
+				// calc the overall compositions
+				tempx = 0;
+				for (k = 0; k < nele; k++)
+				{
+					tempx += CEPhases[i].GP[j].x[k];
+				}
+				for (k = 0; k < nele; k++)
+				{
+					CEPhases[i].GP[j].x[k] = CEPhases[i].GP[j].x[k] / tempx;
+				}
+				CEPhases[i].GP[j].phid = i;
+				CEPhases[i].GP[j].fb = 1;
+			}
+
+			// Print GP in screen=======================
+			if (debug >= 2)
+			{
+				cout << "Grid points in yfracs for  " << CEPhases[i].name << ",    total: " << CEPhases[i].GPn << endl;
+				for (j = 0; j < CEPhases[i].GPn; j++)
+				{
+					for (k = 0; k < CEPhases[i].yn; k++)
+					{
+						cout << CEPhases[i].GP[j].y[k] << "  ";
+					}
+					cout << endl;
+				}
+			}
+			/*
+			//delete====================================
+			for (j = 0; j < CEPhases[i].subln; j++) 
+			{
+				GGComb[j].deletecomb();
+			}
+			*/
+			/*
+			for (j = 0; j < CEPhases[i].GPn; j++)
+			{
+				delete[] output[j];
+			}
+			delete[] output;
+			*/
+			/*
+			for (j = 0; j < CEPhases[i].subln; j++)
+			{
+				delete[] input[j];
+			}
+			delete[] input;
+			*/
+			
+		}
+
+	}
+
+	// calculate the GPn of each phases.
+	void GlobalGrid::CalcGPn(vector<Phase> &CEPhases)
+	{
+		int i, j, k;
+		int nperm, yn;
+		double sublsum;
+		double dy;
+
+		GPn = 0;
+		for (i = 0; i < Phn; i++)
+		{
+			CEPhases[i].GPn = 1;
+			sublsum = CEPhases[i].sublpersum;
+			for (j = 0; j < CEPhases[i].subln; j++)
+			{
+				if (CEPhases[i].conn[j]>1)
+				{
+					//dy = dx/(a/sum(a)) in sublattice 
+					dy = GPdx / CEPhases[i].sublper[j] * sublsum;
+					yn = int(1 / dy);
+					CEPhases[i].GPsdy[j] = 1.0 / yn;
+					CEPhases[i].GPsndy[j] = yn;
+					//combination, put n ball into m box£¬box allow to be empty£¬total: C[(n+m-1),(m-1)]
+					yn += CEPhases[i].conn[j] - 1;
+					nperm = 1;
+					for (k = 0; k < (CEPhases[i].conn[j] - 1); k++)
+						nperm = nperm*(yn - k) / (k + 1);
+					CEPhases[i].GPsn[j] = nperm;
+					//remove identical GP, due to symmetry
+					//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>on going work
+					CEPhases[i].GPn = CEPhases[i].GPn*nperm;
+				}
+				else
+				{
+					CEPhases[i].GPsndy[j] = 1;
+					CEPhases[i].GPsn[j] = 1;
+				}
+			}
+			GPn += CEPhases[i].GPn;
+		}
+	}
+
+	// generate grid point energy, overall GPn
+	void GlobalGrid::GeneGPGF(vector<Phase> &CEPhases, Condition CEConditions)
+	{
+		int i, j, k, ki, nc;
+		int ystart;
+		double tempx;
+
+		int nele = CEConditions.nele - 2;
+		int Phn = CEPhases.size();
+
+		GPn = 0;
+		for (i = 0; i < Phn; i++)
+		{
+			GPn += CEPhases[i].GPn;
+		}
+		GP = new Point[GPn];
+		nc = 0;
+		for (i = 0; i < Phn; i++)
+		{
+			// Calculate Gibbs energy, per mole atom======================================
+			//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> on going work: parallel 
+			
+			MinE.CalcGPGF(CEPhases[i], CEConditions.T);
+			
+			for (j = 0; j < CEPhases[i].GPn; j++)
+			{
+				CEPhases[i].GP[j].x[nele] = CEPhases[i].GPGF[j];
+				GP[nc] = CEPhases[i].GP[j];
+				//ShowPoint(" ", nele + 1, GP[nc]);
+				nc++;
+			}
+
+		}
+	}
+
+	void GlobalGrid::ShowPoint(string str, int n, Point p)
+	{
+		int i;
+		cout << str.c_str() << endl;
+		for (i = 0; i < n; i++)
+			cout << p.x[i] << "  ";
+	}
+=======
 #include "..\include\CalcEquilibrium.h"
 
 namespace VCLab
@@ -298,4 +524,5 @@ namespace VCLab
 		}
 	}
 
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009
 } // end of VCLab

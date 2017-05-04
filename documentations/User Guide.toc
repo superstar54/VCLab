@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+\contentsline {section}{\numberline {1}Preface}{3}
+\contentsline {section}{\numberline {2}Introduction}{3}
+\contentsline {section}{\numberline {3}Installation}{3}
+\contentsline {section}{\numberline {4}Input files}{3}
+\contentsline {subsection}{\numberline {4.1}Dimension}{4}
+\contentsline {subsection}{\numberline {4.2}Mode}{4}
+\contentsline {subsection}{\numberline {4.3}Database File}{4}
+\contentsline {subsection}{\numberline {4.4}Variables}{5}
+\contentsline {subsection}{\numberline {4.5}Global Grid Interval}{5}
+\contentsline {section}{\numberline {5}Gibbs energy surface}{5}
+\contentsline {subsection}{\numberline {5.1}1D}{5}
+\contentsline {subsection}{\numberline {5.2}2D}{5}
+\contentsline {section}{\numberline {6}Equilibrium Calculations}{7}
+\contentsline {subsection}{\numberline {6.1}Single point}{7}
+\contentsline {subsubsection}{\numberline {6.1.1}Fixed x and T}{7}
+\contentsline {subsubsection}{\numberline {6.1.2}Fixed x and Phase}{8}
+\contentsline {subsection}{\numberline {6.2}Step}{8}
+\contentsline {subsection}{\numberline {6.3}Map}{8}
+\contentsline {subsection}{\numberline {6.4}High dimensions calculations}{8}
+\contentsline {section}{\numberline {7}Algorithm}{9}
+\contentsline {subsection}{\numberline {7.1}Gibbs energy function}{9}
+\contentsline {subsection}{\numberline {7.2}Lagrangian method}{10}
+\contentsline {subsection}{\numberline {7.3}External conditions}{11}
+\contentsline {subsection}{\numberline {7.4}Global minimum}{11}
+\contentsline {section}{\numberline {8}Summary}{12}
+=======
 \contentsline {section}{\numberline {1}Introduction}{3}
 \contentsline {section}{\numberline {2}Installation}{3}
 \contentsline {section}{\numberline {3}Input files}{3}
@@ -15,3 +42,4 @@
 \contentsline {subsection}{\numberline {7.3}External conditions}{6}
 \contentsline {subsection}{\numberline {7.4}Global minimum}{6}
 \contentsline {section}{\numberline {8}Summary}{7}
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009

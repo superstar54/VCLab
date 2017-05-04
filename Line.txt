@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+
+Mode					= equilibrium !
+
+Dimension				= 1D !
+
+Database_FileName		= TDB\cusnti.TDB!
+
+Elements				= cu, sn, ti!
+
+Compositions			= 0.1, 0.6, 0.3!
+
+Phases_Selected			= all !
+
+Phases_Rejected			= none !
+
+Pressure				= 10500!
+
+Variables				= Temperature !
+V_Start					= 300 !
+V_End					= 2000 !
+V_Interval				= 5 !
+
+Result_Output_File		= Result.txt !
+
+Global_Grid_interval	= 0.02 !
+=======
 
 VCLmode					= Line !
 
@@ -17,3 +44,4 @@ V_Interval				= 10 !
 Result_Output_File		= Result.txt !
 
 Global_Grid_interval	= 0.0199 !
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009

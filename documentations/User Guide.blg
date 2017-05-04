@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 This is BibTeX, Version 0.99dThe top-level auxiliary file: User Guide.aux
 I found no \citation commands---while reading file User Guide.aux
 I found no \bibdata command---while reading file User Guide.aux
 I found no \bibstyle command---while reading file User Guide.aux
 (There were 3 error messages)
+=======
+This is BibTeX, Version 0.99dThe top-level auxiliary file: User Guide.aux
+I found no \citation commands---while reading file User Guide.aux
+I found no \bibdata command---while reading file User Guide.aux
+I found no \bibstyle command---while reading file User Guide.aux
+(There were 3 error messages)
+>>>>>>> b34a88e731ed6049f6c364b37b469ae02b913009
