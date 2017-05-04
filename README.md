@@ -1,14 +1,14 @@
 ### VCLab
 VCLab (Virtual CALPHAD Laboratory), an open-source software for CALPHAD Calculations written in C++.
 
-###Author
+### Author
 * Xing Wang  <xingwang1991@gmail.com>
 
-###Dependencies
+### Dependencies
 
 * C++
 
-###Model
+### Model
 What property can be calculated:
 (1) Equilibrium
 Calculate the thermodynamic equilibrium
@@ -16,12 +16,12 @@ Calculate the thermodynamic equilibrium
 Calculate the Gibbs energy surface of specific phase.
 
 
-###Database File
+### Database File
 Database has the same format used in commercial software like Thermo-Calc and Pandat. One could put the Database file in the same folder with VCLab, or give the relative path of it, for instance '..\TDB\AlZn.TDB'.
 
 
-####Examples
-#####Single point calculation
+#### Examples
+##### Single point calculation
 Mode                       =    Equilibrium   !
 Dimension                  =    0             !
 Database_File              =    AlZn.TDB      ! 
@@ -59,7 +59,7 @@ X(AL) = 0.517203
 X(ZN) = 0.482797
 
 
-#####1D calculation
+##### 1D calculation
 One examples in Cu-Sn-Ti ternary system is:
 ```python
 Mode                      =    Equilibrium   !
@@ -79,7 +79,7 @@ Global_Grid_Interval      =    0.02          !
 
 <img src="documentations/figs/CuSnTi.png"/>
 
-#####2D calculation
+##### 2D calculation
 Calculate the Gibbs energy surface of BCC_A2 Phases in Cu-Sn-Ti ternary system.
 '''python
 Mode                      =    Energy Surface !
