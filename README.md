@@ -35,7 +35,7 @@ Compositions               =    0.6, 0.4      !
 Global_Grid_Interval       =    0.02          !
 ```
 Equilibrium can be found in the VCLOutput.txt file. A example is list below:
-```
+```python
 ===========================================
 Conditions:   T = 600   P = 10500   N = 1
    X(AL) = 0.7
@@ -92,4 +92,4 @@ Temperature               =    800            !
 Global_Grid_Interval      =    0.02           !
 '''
 
-<img src="documentations/figs/CuSnTi.png"/>
+<img src="documentations/figs/BCC_A2.png"/>
