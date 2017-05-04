@@ -57,7 +57,7 @@ FCC_A1
 Moles: 0.297832
 X(AL) = 0.517203
 X(ZN) = 0.482797
-```python
+```
 
 ##### 1D calculation
 One examples in Cu-Sn-Ti ternary system is:
