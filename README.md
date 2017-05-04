@@ -22,6 +22,7 @@ Database has the same format used in commercial software like Thermo-Calc and Pa
 
 #### Examples
 ##### Single point calculation
+```python
 Mode                       =    Equilibrium   !
 Dimension                  =    0             !
 Database_File              =    AlZn.TDB      ! 
@@ -32,13 +33,14 @@ Pressure                   =    101325        !
 Temperature                =    600           !
 Compositions               =    0.6, 0.4      !
 Global_Grid_Interval       =    0.02          !
-
+```python
 Equilibrium can be found in the VCLOutput.txt file. A example is list below:
-
+```python
+===========================================
 Conditions:   T = 600   P = 10500   N = 1
    X(AL) = 0.7
    X(ZN) = 0.3
-
+===========================================
 Equilibrium:
 
 Chemical potential:
@@ -55,7 +57,7 @@ FCC_A1
 Moles: 0.297832
 X(AL) = 0.517203
 X(ZN) = 0.482797
-
+```python
 
 ##### 1D calculation
 One examples in Cu-Sn-Ti ternary system is:
